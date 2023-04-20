@@ -6,5 +6,10 @@ namespace PJATK3_2
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Dzia³a");
+        }
     }
 }
