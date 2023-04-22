@@ -46,6 +46,7 @@ namespace PJATK3_2
             while (dr.Read())
             {
                 string login = dr["Login"].ToString();
+                int iUzytkownika = (int)dr["IdUzytkownik"];
                 MessageBox.Show(login);
             }
 
