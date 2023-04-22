@@ -11,5 +11,10 @@ namespace PJATK3_2
         {
             MessageBox.Show("Dzia³a");
         }
+
+        private void button1_MouseEnter(object sender, EventArgs e)
+        {
+            button1.Text = button1.Text + "AA";
+        }
     }
 }

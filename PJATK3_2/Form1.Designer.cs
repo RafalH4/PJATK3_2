@@ -37,13 +37,14 @@
             // 
             // button1
             // 
-            button1.Location = new Point(98, 39);
+            button1.Location = new Point(54, 23);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(143, 66);
             button1.TabIndex = 0;
             button1.Text = "Wyświetl okno";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
+            button1.MouseEnter += button1_MouseEnter;
             // 
             // comboBox1
             // 
