@@ -31,10 +31,14 @@
             label1 = new Label();
             loginLabel = new Label();
             groupBox1 = new GroupBox();
+            usunButton = new Button();
+            edytujButton = new Button();
+            dodajButton = new Button();
             dataGridView1 = new DataGridView();
             menuStrip1 = new MenuStrip();
             plikToolStripMenuItem = new ToolStripMenuItem();
             zamknijToolStripMenuItem = new ToolStripMenuItem();
+            groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -59,12 +63,43 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(usunButton);
+            groupBox1.Controls.Add(edytujButton);
+            groupBox1.Controls.Add(dodajButton);
             groupBox1.Location = new Point(12, 65);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(776, 125);
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "Edycja pracownika";
+            // 
+            // usunButton
+            // 
+            usunButton.Location = new Point(286, 35);
+            usunButton.Name = "usunButton";
+            usunButton.Size = new Size(130, 48);
+            usunButton.TabIndex = 2;
+            usunButton.Text = "Usuń";
+            usunButton.UseVisualStyleBackColor = true;
+            usunButton.Click += usunButton_Click;
+            // 
+            // edytujButton
+            // 
+            edytujButton.Location = new Point(150, 35);
+            edytujButton.Name = "edytujButton";
+            edytujButton.Size = new Size(130, 48);
+            edytujButton.TabIndex = 1;
+            edytujButton.Text = "Edytuj";
+            edytujButton.UseVisualStyleBackColor = true;
+            // 
+            // dodajButton
+            // 
+            dodajButton.Location = new Point(14, 35);
+            dodajButton.Name = "dodajButton";
+            dodajButton.Size = new Size(130, 48);
+            dodajButton.TabIndex = 0;
+            dodajButton.Text = "Dodaj";
+            dodajButton.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -73,6 +108,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(776, 318);
             dataGridView1.TabIndex = 3;
             // 
@@ -96,7 +132,7 @@
             // zamknijToolStripMenuItem
             // 
             zamknijToolStripMenuItem.Name = "zamknijToolStripMenuItem";
-            zamknijToolStripMenuItem.Size = new Size(224, 26);
+            zamknijToolStripMenuItem.Size = new Size(145, 26);
             zamknijToolStripMenuItem.Text = "Zamknij";
             zamknijToolStripMenuItem.Click += zamknijToolStripMenuItem_Click;
             // 
@@ -113,6 +149,7 @@
             MainMenuStrip = menuStrip1;
             Name = "MainForm";
             Text = "MainForm";
+            groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -129,5 +166,8 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem plikToolStripMenuItem;
         private ToolStripMenuItem zamknijToolStripMenuItem;
+        private Button usunButton;
+        private Button edytujButton;
+        private Button dodajButton;
     }
 }

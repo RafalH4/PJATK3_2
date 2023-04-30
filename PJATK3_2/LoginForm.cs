@@ -31,7 +31,7 @@ namespace PJATK3_2
                 return;
             }
             //1. Konfiguracja połączenia i zapytania
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-LQFAVEE;Initial Catalog=API_L4;Integrated Security=True");
+            SqlConnection con = new SqlConnection(Constants.ConnectionString);
             SqlCommand com = new SqlCommand();
             var sql = "select * from uzytkownik where login =@login and haslo = @haslo";
             com.Connection = con;
@@ -48,10 +48,10 @@ namespace PJATK3_2
             //4. Odczyt rezultatu
             if (dr.Read())
             {
-                //string login = dr["Login"].ToString();
+                string login = dr["Login"].ToString();
                 //int iUzytkownika = (int)dr["IdUzytkownik"];
                 MessageBox.Show("Zalogowano poprawnie");
-                var glowneOkno = new MainForm();
+                var glowneOkno = new MainForm(login);
                 //Hide();
                 glowneOkno.Show();
             }
