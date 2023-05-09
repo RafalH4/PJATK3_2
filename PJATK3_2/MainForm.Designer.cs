@@ -91,6 +91,7 @@
             edytujButton.TabIndex = 1;
             edytujButton.Text = "Edytuj";
             edytujButton.UseVisualStyleBackColor = true;
+            edytujButton.Click += edytujButton_Click;
             // 
             // dodajButton
             // 
@@ -100,6 +101,7 @@
             dodajButton.TabIndex = 0;
             dodajButton.Text = "Dodaj";
             dodajButton.UseVisualStyleBackColor = true;
+            dodajButton.Click += dodajButton_Click;
             // 
             // dataGridView1
             // 

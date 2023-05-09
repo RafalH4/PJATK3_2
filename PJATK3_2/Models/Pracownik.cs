@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PJATK3_2.Models
 {
-    internal class Pracownik
+    public class Pracownik
     {
         private int _pracownikId;
         public int PracownikId
@@ -35,6 +35,14 @@ namespace PJATK3_2.Models
             get { return _email; }
             set { _email = value; }
         }
+        private DateTime _dataUrodzenia;
+
+        public DateTime DataUrodzenia
+        {
+            get { return _dataUrodzenia; }
+            set { _dataUrodzenia = value; }
+        }
+
 
 
 
